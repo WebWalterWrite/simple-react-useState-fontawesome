@@ -1,16 +1,20 @@
-import React, { Fragment, useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
+
+// import component
+import Main from "./main";
 
 import "./styles.css";
 
 const App = () => {
-  const [stars, setStars] = useState([]);
-
   return (
     <div className="App">
       <header>
         <h1>Hello CodeSandbox</h1>
       </header>
+      <main>
+        <Main />
+      </main>
     </div>
   );
 };
