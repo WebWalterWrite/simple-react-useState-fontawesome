@@ -1,4 +1,18 @@
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+svg {
+  color: yellow;
+}
+.clicker {
+  cursor: pointer;
+  margin: 0 3px 0 3px;
+}
 .App {
   font-family: sans-serif;
   text-align: center;
+}
+section > div {
+  margin: 10px 0 10px 0;
 }
