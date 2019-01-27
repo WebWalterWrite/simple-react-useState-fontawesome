@@ -34,8 +34,14 @@ export default () => {
   return (
     <Fragment>
       <section>
-        <h2>Give a note for React</h2>
-
+        <div className="icon_react">
+          <h2>Give a note for React</h2>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png"
+            width="100"
+            alt="wikipedia react"
+          />
+        </div>
         {stars.arr.map((el, i) => (
           <FontAwesomeIcon
             key={i + 1}

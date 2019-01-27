@@ -1,6 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   background-color: #000000;
   color: #ffffff;
+}
+
+header h1 {
+  text-align: left;
 }
 svg {
   color: yellow;
@@ -9,10 +18,28 @@ svg {
   cursor: pointer;
   margin: 0 3px 0 3px;
 }
-.App {
-  font-family: sans-serif;
+
+section {
+  padding-top: 2em;
   text-align: center;
 }
 section > div {
   margin: 10px 0 10px 0;
+}
+.icon_react {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.icon_react img {
+  animation: rotating 10s linear infinite;
 }
