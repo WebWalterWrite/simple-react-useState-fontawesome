@@ -13,6 +13,7 @@ header h1 {
 }
 svg {
   color: yellow;
+  cursor: pointer;
 }
 .clicker {
   cursor: pointer;
@@ -42,4 +43,16 @@ section > div {
 }
 .icon_react img {
   animation: rotating 10s linear infinite;
+}
+
+button {
+  padding: 1em;
+  background-color: #61dbfb;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: solid 2px #ffffff;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
 }
