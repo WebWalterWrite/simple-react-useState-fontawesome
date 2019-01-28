@@ -26,10 +26,7 @@ section {
   padding-top: 2em;
   text-align: center;
 }
-section div:last-child {
-  margin: 10px 0 10px 0;
-  color: #ffff00;
-}
+
 .icon_react {
   display: flex;
   justify-content: center;
@@ -48,6 +45,12 @@ section div:last-child {
   animation: rotating 10s linear infinite;
 }
 
+.note {
+  margin-top: 10px;
+}
+.message {
+  height: 50px;
+}
 button {
   padding: 1em;
   background-color: #61dbfb;

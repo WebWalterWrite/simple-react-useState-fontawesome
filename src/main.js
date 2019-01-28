@@ -1,5 +1,6 @@
 import React, { Fragment, useState, memo } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 // import icons
 import { faStar } from "@fortawesome/free-regular-svg-icons/";
 import { faStar as fullStar } from "@fortawesome/free-solid-svg-icons/faStar";
@@ -7,7 +8,24 @@ import { faStar as fullStar } from "@fortawesome/free-solid-svg-icons/faStar";
 export default () => {
   let arrStars = Array(5).fill(faStar);
 
-  const [stars, setStars] = useState({ arr: arrStars, note: 0 });
+  const [stars, setStars] = useState({ arr: arrStars, note: 0, icon: "" });
+
+  const setIcon = note => {
+    switch (note) {
+      case 1:
+        return "😭 I am sad of this note 😭";
+      case 2:
+        return "😢 I thought we were friends 😢";
+      case 3:
+        return "😌 We are on the right path 😌";
+      case 4:
+        return "🤗🤗 you are my best friend 🤗🤗";
+      case 5:
+        return "🤩🤩 We will go far together 🤩🤩";
+      default:
+        return null;
+    }
+  };
 
   /*
    Récupérer le numéro d'index de l'élément et remplir le array à selon le l'index.
@@ -19,7 +37,7 @@ export default () => {
 
     num !== stars.note &&
     arrStars.fill(fullStar, 0, num) && // Remplacer les étoiles vides par les étoiles pleines.
-      setStars({ arr: arrStars, note: num }); // modifier le state stars.
+      setStars({ arr: arrStars, note: num, icon: setIcon(num) }); // modifier le state stars.
   };
 
   /*
@@ -28,7 +46,7 @@ export default () => {
   const resRank = () => {
     stars.note !== 0 &&
       arrStars.fill(faStar, 5) &&
-      setStars({ arr: arrStars, note: 0 });
+      setStars({ arr: arrStars, note: 0, icon: "" });
   };
 
   return (
@@ -51,7 +69,14 @@ export default () => {
             onClick={setRank}
           />
         ))}
-        <div>{stars.note}/5</div>
+
+        <div className="note">{stars.note}/5</div>
+
+        <div className="message">
+          <span role="img" aria-label="icon">
+            {stars.icon}
+          </span>
+        </div>
       </section>
 
       <section>
